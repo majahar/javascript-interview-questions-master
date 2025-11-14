@@ -1,0 +1,38 @@
+JavaScript code to group the array by key:
+
+let obj = [
+  { key: "Sample 1", value: "data1" },
+  { key: "Sample 1", value: "data1" },
+  { key: "Sample 1", value: "data1" },
+  { key: "Sample 2", value: "data1" },
+  { key: "Sample 3", value: "data1" }
+];
+
+// Solution 1
+let grouped = obj.reduce((acc, item) => {
+    console.log("RR->"+acc[item.key])
+  if (!acc[item.key]) {
+      console.log(item.key)
+    acc[item.key] = [];
+  }
+  acc[item.key].push(item);
+  return acc;
+}, {});
+
+console.log(grouped);
+
+// Solution 2
+
+
+let output = obj.reduce((acc, curr) => {
+    
+    if(acc[curr.key]){
+        acc[curr.key].push(curr)
+    }else{
+        acc[curr.key] = [curr]
+    }
+    return acc;
+    
+}, {})
+
+console.log(output)
