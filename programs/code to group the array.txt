@@ -9,17 +9,17 @@ let obj = [
 ];
 
 // Solution 1
-let grouped = obj.reduce((acc, item) => {
-    console.log("RR->"+acc[item.key])
-  if (!acc[item.key]) {
-      console.log(item.key)
-    acc[item.key] = [];
-  }
-  acc[item.key].push(item);
-  return acc;
-}, {});
+let newObj = {}
+for(let i=0; i<obj.length; i++){
+    if(!newObj[obj[i].key]){
+    newObj[obj[i].key] = [obj[i]]
+    }else{
+        console.log(2)
+       newObj[obj[i].key].push(obj[i]);
 
-console.log(grouped);
+    }
+    
+}
 
 // Solution 2
 
