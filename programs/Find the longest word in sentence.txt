@@ -1,0 +1,13 @@
+//Find the longest word in sentence
+function findTheLongestWordIntheString(){
+    let str = 'Hi my nam is majahar khan i am'
+    
+  const longestWord =  str.split(" ").reduce((acc,curr) =>{
+        console.log(curr+" "+curr.length)
+        return acc.length > curr.length ? acc : curr 
+    },'')
+    
+    return longestWord;
+}
+
+console.log(findTheLongestWordIntheString())

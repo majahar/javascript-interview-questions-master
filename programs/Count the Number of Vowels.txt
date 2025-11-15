@@ -1,0 +1,16 @@
+//Count the Number of Vowels Using Regex
+
+function countVowels(str){
+    let vowels = ['a','e','i','o','u'];
+    let count=0;
+    str.split("").map((val,index) => {
+        //console.log(val.toLowerCase())
+        if(vowels.includes(val.toLowerCase())){
+          console.log(val+"-->at index-> "+index+" Cont num:"+count++)
+        }
+        
+    })
+    
+    return count;
+}
+console.log(countVowels('Enter the prompt I need to check count of vowels'))
