@@ -1,0 +1,18 @@
+//Check string is palindrom or not
+
+//Sol1
+function palindrom(str){
+    
+   let strRev =  str.split("").reverse().join("");
+   if(str == strRev){
+      console.log('It is a paliindrom')
+       
+   }else{
+       console.log('Not a palindropm')
+   }
+    
+
+ 
+}
+
+console.log(palindrom('ccocci'))
