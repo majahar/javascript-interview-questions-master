@@ -1,0 +1,24 @@
+
+// //Sort Array in Dessending order
+// //Sol 1
+function sortArrayInDesscending(arr){
+  const sortedArr=  arr.sort((a,b) => b-a);
+  return sortedArr
+}
+ // Sol 2
+function sortArrayInDesscending(arr){
+    let temp=0;
+    for(let i=0; i < arr.length; i++){
+        for(let j =i+1; j<arr.length; j++){
+            if(arr[i] < arr[j]){
+                temp = arr[i]
+                arr[i] = arr[j]
+                arr[j] = temp;
+            }
+        }
+    }
+    
+  return arr
+}
+
+console.log(sortArrayInDesscending([2,8,9,3,6,1,4]))

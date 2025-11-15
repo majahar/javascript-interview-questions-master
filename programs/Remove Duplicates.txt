@@ -1,0 +1,18 @@
+//Remove Duplicates
+// Sol 1
+function removeDuplicates(arr){
+    
+    const filteredValue= arr.filter((item, pos) => {
+        return arr.indexOf(item) == pos;
+    })
+    return filteredValue;
+}
+
+//Sol 2
+function removeDuplicates(arr){
+    
+  const filtered = [... new Set(arr)];
+  return filtered
+}
+
+console.log(reoveDuplicates([2,3,4,3,2,3,2,6,9,3,4]))

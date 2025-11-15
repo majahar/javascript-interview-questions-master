@@ -1,0 +1,11 @@
+// Find Max value from arry
+
+function findMaxValueFromArr(arr){
+    
+  const max =  arr.reduce((acc,curr) => {
+        return acc > curr ? acc : curr
+    })
+    return max
+}
+
+console.log(findMaxValueFromArr([9, 8, 6, 4,7,5]))

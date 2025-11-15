@@ -1,0 +1,24 @@
+
+//Sort Array in Assending order
+//Sol 1
+function sortArrayInAsscending(arr){
+  const sortedArr=  arr.sort((a,b) => a-b);
+  return sortedArr
+}
+ // Sol 2
+function sortArrayInAsscending(arr){
+    let temp=0;
+    for(let i=0; i < arr.length; i++){
+        for(let j =i+1; j<arr.length; j++){
+            if(arr[i] > arr[j]){
+                temp = arr[i]
+                arr[i] = arr[j]
+                arr[j] = temp;
+            }
+        }
+    }
+    
+  return arr
+}
+
+console.log(sortArrayInAsscending([2,8,9,3,6,1,4]))

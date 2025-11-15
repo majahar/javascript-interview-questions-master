@@ -1,0 +1,11 @@
+// Find Min value from arry
+
+function findMinValueFromArr(arr){
+    
+  const min=  arr.reduce((acc,curr) => {
+        return acc < curr ? acc : curr
+    })
+    return min
+}
+
+console.log(findMinValueFromArr([9, 8, 6, 4,7,5]))
